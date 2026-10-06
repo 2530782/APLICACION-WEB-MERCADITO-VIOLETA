@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bazares | Mercadito Violeta</title>
+    <meta name="description" content="Calendario de bazares y talleres para emprendedoras de Tulancingo. Consulta fechas, horarios y cómo participar.">
+    <meta name="theme-color" content="#5B1F8A">
+    <meta name="author" content="Josué Joel Macías Ortega">
+    <meta name="keywords" content="emprendedoras, Tulancingo, Hidalgo, hecho a mano, negocios locales, bazares, directorio">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph (vista previa al compartir en Facebook, WhatsApp, etc.) -->
+    <!-- Al publicar el sitio, cambia la ruta de og:image por la URL completa -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Mercadito Violeta">
+    <meta property="og:locale" content="es_MX">
+    <meta property="og:title" content="Bazares | Mercadito Violeta">
+    <meta property="og:description" content="Calendario de bazares y talleres para emprendedoras de Tulancingo. Consulta fechas, horarios y cómo participar.">
+    <meta property="og:image" content="assets/img/logo.png">
+    <meta property="og:image:alt" content="Logo de Mercadito Violeta">
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Bazares | Mercadito Violeta">
+    <meta name="twitter:description" content="Calendario de bazares y talleres para emprendedoras de Tulancingo. Consulta fechas, horarios y cómo participar.">
+    <meta name="twitter:image" content="assets/img/logo.png">
+    <link rel="icon" href="assets/img/logo-icono.png" type="image/png">
+
+    <!-- Las tipografías (Young Serif y Nunito) están en assets/fonts y se declaran en css/styles.css -->
+
+    <!-- Framework: Bootstrap 5.3 e iconos Bootstrap Icons (copias locales en la carpeta vendor) -->
+    <link href="vendor/bootstrap.min.css" rel="stylesheet">
+    <link href="vendor/bootstrap-icons.min.css" rel="stylesheet">
+
+    <!-- Estilos propios (personalización) -->
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+    <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+    <!-- HEADER Y MENÚ DE NAVEGACIÓN -->
+    <header>
+        <nav class="navbar navbar-expand-lg" aria-label="Principal">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                    <img src="assets/img/logo-icono.png" alt="" width="40" height="40">
+                    Mercadito Violeta
+                </a>
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir menú">
+                    <i class="bi bi-list fs-2" aria-hidden="true"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="menu">
+                    <ul class="navbar-nav ms-auto gap-lg-1">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html"><i class="bi bi-shop-window" aria-hidden="true"></i> Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="emprendedoras.html"><i class="bi bi-stars" aria-hidden="true"></i> Emprendedoras</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="nosotras.html"><i class="bi bi-heart-fill" aria-hidden="true"></i> Nosotras</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="bazares.html" aria-current="page"><i class="bi bi-calendar-heart" aria-hidden="true"></i> Bazares</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="unete.html"><i class="bi bi-person-heart" aria-hidden="true"></i> Únete</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="toldo" aria-hidden="true"></div>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main id="contenido">
+        <section class="pagina">
+            <div class="container">
+                <h1 class="entrada">Bazares y talleres</h1>
+                <p class="entrada mb-0 fs-5">Conoce en persona a las emprendedoras y aprende junto a ellas.</p>
+            </div>
+        </section>
+
+        <section class="py-5">
+            <div class="container">
+                <div class="row g-4 g-lg-5">
+                    <div class="col-lg-8">
+                        <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4">
+                            <h2 class="mb-0">Próximas fechas</h2>
+                            <div class="filtros d-flex flex-wrap gap-2" role="group" aria-label="Filtrar por tipo de evento">
+                                <button class="btn activo" type="button" data-evento="Todos" aria-pressed="true">Todos</button>
+                                <button class="btn" type="button" data-evento="Bazar" aria-pressed="false">Bazares</button>
+                                <button class="btn" type="button" data-evento="Taller" aria-pressed="false">Talleres</button>
+                            </div>
+                        </div>
+                        <ol class="lista-eventos list-unstyled">
+                            <li class="evento" data-tipo="Bazar">
+                                <div class="fecha" aria-hidden="true"><strong>18</strong>OCT</div>
+                                <div>
+                                    <span class="etiqueta">Bazar</span>
+                                    <h3 class="h5 mt-2">Bazar de otoño</h3>
+                                    <p class="dato"><i class="bi bi-geo-alt-fill" aria-hidden="true"></i> Plaza de ejemplo, Centro de Tulancingo</p>
+                                    <p class="dato"><i class="bi bi-clock-fill" aria-hidden="true"></i> 11:00 a 18:00</p>
+                                    <p class="mb-0">Más de diez puestos con velas, pan de temporada, joyería y plantas. Entrada libre.</p>
+                                </div>
+                            </li>
+                            <li class="evento revela" data-tipo="Bazar">
+                                <div class="fecha" aria-hidden="true"><strong>01</strong>NOV</div>
+                                <div>
+                                    <span class="etiqueta">Bazar</span>
+                                    <h3 class="h5 mt-2">Mercadito de Día de Muertos</h3>
+                                    <p class="dato"><i class="bi bi-geo-alt-fill" aria-hidden="true"></i> Jardín de ejemplo, Tulancingo</p>
+                                    <p class="dato"><i class="bi bi-clock-fill" aria-hidden="true"></i> 10:00 a 20:00</p>
+                                    <p class="mb-0">Pan de muerto, flores de cempasúchil, artesanías y dulces típicos hechos por emprendedoras locales.</p>
+                                </div>
+                            </li>
+                            <li class="evento revela" data-tipo="Taller">
+                                <div class="fecha" aria-hidden="true"><strong>14</strong>NOV</div>
+                                <div>
+                                    <span class="etiqueta">Taller</span>
+                                    <h3 class="h5 mt-2">Taller: fotografía de producto con celular</h3>
+                                    <p class="dato"><i class="bi bi-geo-alt-fill" aria-hidden="true"></i> Casa de cultura (ejemplo)</p>
+                                    <p class="dato"><i class="bi bi-clock-fill" aria-hidden="true"></i> 16:00 a 18:00</p>
+                                    <p class="mb-0">Aprende a tomar fotos atractivas de tus productos con luz natural. Cupo limitado.</p>
+                                </div>
+                            </li>
+                            <li class="evento revela" data-tipo="Taller">
+                                <div class="fecha" aria-hidden="true"><strong>05</strong>DIC</div>
+                                <div>
+                                    <span class="etiqueta">Taller</span>
+                                    <h3 class="h5 mt-2">Taller: cómo poner precio a lo que haces</h3>
+                                    <p class="dato"><i class="bi bi-geo-alt-fill" aria-hidden="true"></i> Casa de cultura (ejemplo)</p>
+                                    <p class="dato"><i class="bi bi-clock-fill" aria-hidden="true"></i> 16:00 a 18:30</p>
+                                    <p class="mb-0">Calcula costos, tiempo y ganancia para vender sin regalar tu trabajo.</p>
+                                </div>
+                            </li>
+                            <li class="evento revela" data-tipo="Bazar">
+                                <div class="fecha" aria-hidden="true"><strong>13</strong>DIC</div>
+                                <div>
+                                    <span class="etiqueta">Bazar</span>
+                                    <h3 class="h5 mt-2">Gran bazar navideño</h3>
+                                    <p class="dato"><i class="bi bi-geo-alt-fill" aria-hidden="true"></i> Explanada de ejemplo, Tulancingo</p>
+                                    <p class="dato"><i class="bi bi-clock-fill" aria-hidden="true"></i> 11:00 a 21:00</p>
+                                    <p class="mb-0">Regalos hechos a mano, comida y música en vivo para cerrar el año comprando local.</p>
+                                </div>
+                            </li>
+                        </ol>
+                        <p class="small">Fechas y lugares de ejemplo. Ninguno es real.</p>
+                    </div>
+
+                    <aside class="col-lg-4">
+                        <div class="tarjeta h-auto mb-4 revela">
+                            <img src="assets/img/aretes.jpg" alt="Aretes de colores hechos a mano" width="600" height="600" loading="lazy">
+                        </div>
+                        <div class="tarjeta caja h-auto mb-4 revela">
+                            <h2 class="h4 mb-3">¿Quieres vender en un bazar?</h2>
+                            <p>Los puestos son gratuitos para negocios registrados en el directorio. Solo debes llevar tu mesa y tus productos.</p>
+                            <a class="btn btn-violeta" href="unete.html">Registrar mi negocio</a>
+                        </div>
+                        <div class="tarjeta caja h-auto revela">
+                            <h2 class="h4 mb-3">Consejos para visitar</h2>
+                            <p class="dato"><i class="bi bi-bag-heart-fill" aria-hidden="true"></i> Lleva tu bolsa de tela.</p>
+                            <p class="dato"><i class="bi bi-cash-coin" aria-hidden="true"></i> Trae efectivo en billetes chicos.</p>
+                            <p class="dato mb-0"><i class="bi bi-camera-fill" aria-hidden="true"></i> Etiqueta a las emprendedoras en tus fotos.</p>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-5">
+                    <h2 class="h4">Mercadito Violeta</h2>
+                    <p>Directorio de mujeres emprendedoras de Tulancingo. Proyecto escolar con fines académicos.</p>
+                    <div class="redes">
+                        <a href="https://www.facebook.com/" aria-label="Facebook"><i class="bi bi-facebook" aria-hidden="true"></i></a>
+                        <a href="https://www.instagram.com/" aria-label="Instagram"><i class="bi bi-instagram" aria-hidden="true"></i></a>
+                        <a href="https://wa.me/" aria-label="WhatsApp"><i class="bi bi-whatsapp" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <h2 class="h5">Páginas</h2>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="emprendedoras.html">Emprendedoras</a></li>
+                        <li><a href="nosotras.html">Nosotras</a></li>
+                        <li><a href="bazares.html">Bazares</a></li>
+                        <li><a href="unete.html">Únete</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-4">
+                    <h2 class="h5">Créditos</h2>
+                    <p class="mb-0">Universidad Politécnica de Tulancingo. Octubre de 2026.</p>
+                    <p class="small mt-2 mb-0">Fotografías de <a href="https://www.pexels.com/" rel="noopener">Pexels</a>, de uso libre.</p>
+                </div>
+            </div>
+            <hr>
+            <p class="small mb-0">Negocios, teléfonos y precios de ejemplo. Ninguno es real.</p>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="vendor/bootstrap.bundle.min.js" defer></script>
+    <script src="js/main.js" defer></script>
+</body>
+</html>

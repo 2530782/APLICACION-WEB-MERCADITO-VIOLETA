@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Inicio | Mercadito Violeta</title>
+    <meta name="description" content="Directorio de mujeres emprendedoras de Tulancingo: encuentra negocios locales y compra directo a quien los hace.">
+    <meta name="theme-color" content="#5B1F8A">
+    <meta name="author" content="Josué Joel Macías Ortega">
+    <meta name="keywords" content="emprendedoras, Tulancingo, Hidalgo, hecho a mano, negocios locales, bazares, directorio">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph (vista previa al compartir en Facebook, WhatsApp, etc.) -->
+    <!-- Al publicar el sitio, cambia la ruta de og:image por la URL completa -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Mercadito Violeta">
+    <meta property="og:locale" content="es_MX">
+    <meta property="og:title" content="Inicio | Mercadito Violeta">
+    <meta property="og:description" content="Directorio de mujeres emprendedoras de Tulancingo: encuentra negocios locales y compra directo a quien los hace.">
+    <meta property="og:image" content="assets/img/logo.png">
+    <meta property="og:image:alt" content="Logo de Mercadito Violeta">
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Inicio | Mercadito Violeta">
+    <meta name="twitter:description" content="Directorio de mujeres emprendedoras de Tulancingo: encuentra negocios locales y compra directo a quien los hace.">
+    <meta name="twitter:image" content="assets/img/logo.png">
+    <link rel="icon" href="assets/img/logo-icono.png" type="image/png">
+
+    <!-- Las tipografías (Young Serif y Nunito) están en assets/fonts y se declaran en css/styles.css -->
+
+    <!-- Framework: Bootstrap 5.3 e iconos Bootstrap Icons (copias locales en la carpeta vendor) -->
+    <link href="vendor/bootstrap.min.css" rel="stylesheet">
+    <link href="vendor/bootstrap-icons.min.css" rel="stylesheet">
+
+    <!-- Estilos propios (personalización) -->
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+    <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+    <!-- HEADER Y MENÚ DE NAVEGACIÓN -->
+    <header>
+        <nav class="navbar navbar-expand-lg" aria-label="Principal">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                    <img src="assets/img/logo-icono.png" alt="" width="40" height="40">
+                    Mercadito Violeta
+                </a>
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir menú">
+                    <i class="bi bi-list fs-2" aria-hidden="true"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="menu">
+                    <ul class="navbar-nav ms-auto gap-lg-1">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html"><i class="bi bi-shop-window" aria-hidden="true"></i> Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="emprendedoras.html"><i class="bi bi-stars" aria-hidden="true"></i> Emprendedoras</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="nosotras.html"><i class="bi bi-heart-fill" aria-hidden="true"></i> Nosotras</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="bazares.html"><i class="bi bi-calendar-heart" aria-hidden="true"></i> Bazares</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="unete.html"><i class="bi bi-person-heart" aria-hidden="true"></i> Únete</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="toldo" aria-hidden="true"></div>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main id="contenido">
+
+        <!-- Portada -->
+        <section class="hero">
+            <div class="container">
+                <div class="row align-items-center g-4 g-lg-5">
+                    <div class="col-md-7">
+                        <h1 class="entrada">Compra a quien lo hace con sus manos</h1>
+                        <p class="entrada fs-5 mt-3">
+                            Mercadito Violeta reúne en un solo lugar a las emprendedoras de Tulancingo:
+                            velas, pan, joyería, plantas y mucho más.
+                        </p>
+                        <div class="entrada d-flex flex-wrap gap-3 mt-4">
+                            <a class="btn btn-mango btn-lg" href="emprendedoras.html"><i class="bi bi-stars" aria-hidden="true"></i> Ver emprendedoras</a>
+                            <a class="btn btn-contorno btn-lg" href="unete.html">Registrar mi negocio</a>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="logo-hero entrada">
+                            <img src="assets/img/logo.png" alt="Logo de Mercadito Violeta: puesto de mercado con toldo morado" width="480" height="480" fetchpriority="high">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Carrusel de Bootstrap -->
+        <section class="py-5">
+            <div class="container">
+                <h2 class="mb-4 revela">Lo que se hace en Tulancingo</h2>
+                <div id="carrusel" class="carousel slide carrusel revela" data-bs-ride="carousel" aria-label="Productos de las emprendedoras">
+                    <div class="carousel-indicators"><button type="button" data-bs-target="#carrusel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Foto 1"></button><button type="button" data-bs-target="#carrusel" data-bs-slide-to="1" aria-label="Foto 2"></button><button type="button" data-bs-target="#carrusel" data-bs-slide-to="2" aria-label="Foto 3"></button><button type="button" data-bs-target="#carrusel" data-bs-slide-to="3" aria-label="Foto 4"></button><button type="button" data-bs-target="#carrusel" data-bs-slide-to="4" aria-label="Foto 5"></button><button type="button" data-bs-target="#carrusel" data-bs-slide-to="5" aria-label="Foto 6"></button></div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="assets/img/vela.jpg" alt="Velas artesanales en frascos de vidrio sobre una charola" width="1200" height="600">
+                            <div class="carousel-caption">
+                                <span class="etiqueta">Hogar</span>
+                                <h3 class="h4 mt-2">Velas Luna Nueva</h3>
+                                <p class="mb-2">Velas de soya con aromas de lavanda, vainilla y canela.</p>
+                                <a class="btn btn-mango btn-sm" href="emprendedoras.html?categoria=Hogar">Ver hogar</a>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/img/galletas.jpg" alt="Pan dulce mexicano con grana de colores" width="1200" height="600" loading="lazy">
+                            <div class="carousel-caption">
+                                <span class="etiqueta">Comida</span>
+                                <h3 class="h4 mt-2">Dulce Tahona</h3>
+                                <p class="mb-2">Pan dulce, galletas y panqués horneados en Tulancingo.</p>
+                                <a class="btn btn-mango btn-sm" href="emprendedoras.html?categoria=Comida">Ver comida</a>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/img/aretes.jpg" alt="Aretes de chaquira hechos a mano" width="1200" height="600" loading="lazy">
+                            <div class="carousel-caption">
+                                <span class="etiqueta">Accesorios</span>
+                                <h3 class="h4 mt-2">Brillo de Nopal</h3>
+                                <p class="mb-2">Aretes y pulseras de chaquira, uno por uno.</p>
+                                <a class="btn btn-mango btn-sm" href="emprendedoras.html?categoria=Accesorios">Ver accesorios</a>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/img/bolsas.jpg" alt="Bolsa tejida a mano colgada en una pared blanca" width="1200" height="600" loading="lazy">
+                            <div class="carousel-caption">
+                                <span class="etiqueta">Accesorios</span>
+                                <h3 class="h4 mt-2">Hilos de Maguey</h3>
+                                <p class="mb-2">Bolsas y morrales tejidos con estambres de colores.</p>
+                                <a class="btn btn-mango btn-sm" href="emprendedoras.html?categoria=Accesorios">Ver accesorios</a>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/img/suculentas.jpg" alt="Suculentas en macetas pequeñas" width="1200" height="600" loading="lazy">
+                            <div class="carousel-caption">
+                                <span class="etiqueta">Hogar</span>
+                                <h3 class="h4 mt-2">Verde Raíz</h3>
+                                <p class="mb-2">Suculentas y macetas para alegrar cualquier rincón.</p>
+                                <a class="btn btn-mango btn-sm" href="emprendedoras.html?categoria=Hogar">Ver hogar</a>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/img/jabon.jpg" alt="Jabones artesanales apilados con ingredientes naturales" width="1200" height="600" loading="lazy">
+                            <div class="carousel-caption">
+                                <span class="etiqueta">Belleza</span>
+                                <h3 class="h4 mt-2">Jabones Caléndula</h3>
+                                <p class="mb-2">Jabones naturales para piel sensible.</p>
+                                <a class="btn btn-mango btn-sm" href="emprendedoras.html?categoria=Belleza">Ver belleza</a>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carrusel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Anterior</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carrusel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Siguiente</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categorías -->
+        <section class="pb-5">
+            <div class="container">
+                <h2 class="mb-4 revela">Explora por categoría</h2>
+                <div class="row g-4">
+                    <div class="col-6 col-lg-3 revela">
+                        <a class="tarjeta categoria text-decoration-none" href="emprendedoras.html?categoria=Comida">
+                            <img src="assets/img/galletas.jpg" alt="Pan dulce mexicano" width="600" height="600" loading="lazy">
+                            <div class="p-3">
+                                <h3 class="h5 mb-1">Comida</h3>
+                                <p class="mb-0 small">Pan, galletas y dulces</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6 col-lg-3 revela">
+                        <a class="tarjeta categoria text-decoration-none" href="emprendedoras.html?categoria=Hogar">
+                            <img src="assets/img/vela.jpg" alt="Velas aromáticas de colores" width="600" height="600" loading="lazy">
+                            <div class="p-3">
+                                <h3 class="h5 mb-1">Hogar</h3>
+                                <p class="mb-0 small">Velas y plantas</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6 col-lg-3 revela">
+                        <a class="tarjeta categoria text-decoration-none" href="emprendedoras.html?categoria=Accesorios">
+                            <img src="assets/img/aretes.jpg" alt="Aretes de chaquira colgados de una rama" width="600" height="600" loading="lazy">
+                            <div class="p-3">
+                                <h3 class="h5 mb-1">Accesorios</h3>
+                                <p class="mb-0 small">Joyería y bolsas</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6 col-lg-3 revela">
+                        <a class="tarjeta categoria text-decoration-none" href="emprendedoras.html?categoria=Belleza">
+                            <img src="assets/img/jabon.jpg" alt="Jabones artesanales apilados" width="600" height="600" loading="lazy">
+                            <div class="p-3">
+                                <h3 class="h5 mb-1">Belleza</h3>
+                                <p class="mb-0 small">Jabones y cuidado personal</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cómo funciona -->
+        <section class="py-5">
+            <div class="container">
+                <h2 class="mb-4 revela">Así funciona el mercadito</h2>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-3 revela">
+                        <div class="tarjeta caja">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <div class="icono color1"><i class="bi bi-search-heart" aria-hidden="true"></i></div>
+                                <span class="paso"><span class="visually-hidden">Paso </span>1</span>
+                            </div>
+                            <h3 class="h5">Descubre</h3>
+                            <p>Explora negocios por categoría o busca por nombre.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 revela">
+                        <div class="tarjeta caja">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <div class="icono color2"><i class="bi bi-chat-heart-fill" aria-hidden="true"></i></div>
+                                <span class="paso"><span class="visually-hidden">Paso </span>2</span>
+                            </div>
+                            <h3 class="h5">Contacta</h3>
+                            <p>Habla directo con la emprendedora por teléfono o mensaje.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 revela">
+                        <div class="tarjeta caja">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <div class="icono color3"><i class="bi bi-geo-alt-fill" aria-hidden="true"></i></div>
+                                <span class="paso"><span class="visually-hidden">Paso </span>3</span>
+                            </div>
+                            <h3 class="h5">Compra local</h3>
+                            <p>Tu dinero se queda en Tulancingo y en las familias de aquí.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 revela">
+                        <div class="tarjeta caja">
+                            <div class="d-flex justify-content-between align-items-start">
+                                <div class="icono color4"><i class="bi bi-megaphone-fill" aria-hidden="true"></i></div>
+                                <span class="paso"><span class="visually-hidden">Paso </span>4</span>
+                            </div>
+                            <h3 class="h5">Date a conocer</h3>
+                            <p>Si emprendes, registra tu negocio gratis en un par de minutos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Negocios destacados -->
+        <section class="pb-5">
+            <div class="container">
+                <div class="d-flex flex-wrap justify-content-between align-items-end gap-3 mb-4">
+                    <h2 class="revela mb-0">Negocios destacados</h2>
+                    <a class="btn btn-violeta" href="emprendedoras.html">Ver todas</a>
+                </div>
+                <div class="row g-4">
+
+                    <!-- NEGOCIO 1: cambia la ruta en src por la de tu foto -->
+                    <div class="col-sm-6 col-lg-4 revela" data-categoria="Hogar">
+                        <article class="tarjeta">
+                            <img src="assets/img/vela.jpg" alt="Velas artesanales en frascos de vidrio" width="600" height="600" loading="lazy">
+                            <div class="p-3 p-lg-4">
+                                <span class="etiqueta">Hogar</span>
+                                <h3 class="h5 mt-2">Velas Luna Nueva</h3>
+                                <p>Velas aromáticas de soya hechas a mano, en frascos reutilizables.</p>
+                                <p class="dato"><i class="bi bi-fire" aria-hidden="true"></i> Lavanda, vainilla y canela</p>
+                                <p class="dato mb-3"><i class="bi bi-telephone-fill" aria-hidden="true"></i> 771 000 0001</p>
+                                <a class="btn btn-violeta" href="unete.html#contacto"><i class="bi bi-chat-heart" aria-hidden="true"></i> Contactar</a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- NEGOCIO 2: cambia la ruta en src por la de tu foto -->
+                    <div class="col-sm-6 col-lg-4 revela" data-categoria="Comida">
+                        <article class="tarjeta">
+                            <img src="assets/img/galletas.jpg" alt="Pan artesanal en canastas de mimbre" width="600" height="600" loading="lazy">
+                            <div class="p-3 p-lg-4">
+                                <span class="etiqueta">Comida</span>
+                                <h3 class="h5 mt-2">Dulce Tahona</h3>
+                                <p>Galletas, pan de pulque y panqués por encargo para tus reuniones.</p>
+                                <p class="dato"><i class="bi bi-cup-hot" aria-hidden="true"></i> Pedidos con 2 días de anticipación</p>
+                                <p class="dato mb-3"><i class="bi bi-telephone-fill" aria-hidden="true"></i> 771 000 0002</p>
+                                <a class="btn btn-violeta" href="unete.html#contacto"><i class="bi bi-chat-heart" aria-hidden="true"></i> Contactar</a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- NEGOCIO 3: cambia la ruta en src por la de tu foto -->
+                    <div class="col-sm-6 col-lg-4 revela" data-categoria="Hogar">
+                        <article class="tarjeta">
+                            <img src="assets/img/suculentas.jpg" alt="Suculentas en macetas pequeñas" width="600" height="600" loading="lazy">
+                            <div class="p-3 p-lg-4">
+                                <span class="etiqueta">Hogar</span>
+                                <h3 class="h5 mt-2">Verde Raíz</h3>
+                                <p>Suculentas, cactus y macetas pintadas para dar vida a tu casa.</p>
+                                <p class="dato"><i class="bi bi-flower2" aria-hidden="true"></i> Incluye guía de cuidados</p>
+                                <p class="dato mb-3"><i class="bi bi-telephone-fill" aria-hidden="true"></i> 771 000 0005</p>
+                                <a class="btn btn-violeta" href="unete.html#contacto"><i class="bi bi-chat-heart" aria-hidden="true"></i> Contactar</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Testimonios -->
+        <section class="pb-5">
+            <div class="container">
+                <h2 class="mb-4 revela">Lo que dicen las emprendedoras</h2>
+                <div class="row g-4">
+                    <div class="col-md-4 revela">
+                        <figure class="tarjeta caja mb-0">
+                            <blockquote class="mb-3">Antes vendía solo a conocidos. Ahora me escriben personas que nunca había visto.</blockquote>
+                            <figcaption class="fw-bold">Mariana (ejemplo)<span class="d-block fw-normal small">Velas Luna Nueva</span></figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-md-4 revela">
+                        <figure class="tarjeta caja mb-0">
+                            <blockquote class="mb-3">Me gustó que registrarme fuera gratis y rápido. Mi tarjeta quedó muy bonita.</blockquote>
+                            <figcaption class="fw-bold">Lupita (ejemplo)<span class="d-block fw-normal small">Dulce Tahona</span></figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-md-4 revela">
+                        <figure class="tarjeta caja mb-0">
+                            <blockquote class="mb-3">En el bazar conocí a otras emprendedoras y ya hacemos pedidos en conjunto.</blockquote>
+                            <figcaption class="fw-bold">Itzel (ejemplo)<span class="d-block fw-normal small">Brillo de Nopal</span></figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <p class="small mt-3 mb-0">Testimonios de ejemplo del proyecto escolar.</p>
+            </div>
+        </section>
+
+        <!-- Próximos bazares -->
+        <section class="pb-5">
+            <div class="container">
+                <div class="d-flex flex-wrap justify-content-between align-items-end gap-3 mb-4">
+                    <h2 class="revela mb-0">Próximos bazares</h2>
+                    <a class="btn btn-violeta" href="bazares.html">Ver calendario</a>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-6 revela">
+                        <div class="evento h-100">
+                            <div class="fecha" aria-hidden="true"><strong>18</strong>OCT</div>
+                            <div>
+                                <h3 class="h5">Bazar de otoño</h3>
+                                <p class="dato"><i class="bi bi-clock-fill" aria-hidden="true"></i> 11:00 a 18:00</p>
+                                <p class="mb-0">Más de diez puestos con velas, pan de temporada, joyería y plantas.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 revela">
+                        <div class="evento h-100">
+                            <div class="fecha" aria-hidden="true"><strong>01</strong>NOV</div>
+                            <div>
+                                <h3 class="h5">Mercadito de Día de Muertos</h3>
+                                <p class="dato"><i class="bi bi-clock-fill" aria-hidden="true"></i> 10:00 a 20:00</p>
+                                <p class="mb-0">Pan de muerto, flores de cempasúchil y artesanías locales.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Problema y objetivo -->
+        <section class="pb-5">
+            <div class="container">
+                <div class="franja revela">
+                    <div class="row align-items-center g-3">
+                        <div class="col-lg-8">
+                            <h2 class="h3">Por qué existe este sitio</h2>
+                            <p class="mb-0">
+                                Muchas mujeres de Tulancingo venden productos hechos a mano, pero casi nadie
+                                sabe que existen. Este directorio les da un lugar visible y gratuito para
+                                que más personas las encuentren.
+                            </p>
+                        </div>
+                        <div class="col-lg-4 text-lg-end">
+                            <a class="btn btn-violeta" href="unete.html">Quiero aparecer aquí</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-5">
+                    <h2 class="h4">Mercadito Violeta</h2>
+                    <p>Directorio de mujeres emprendedoras de Tulancingo. Proyecto escolar con fines académicos.</p>
+                    <div class="redes">
+                        <a href="https://www.facebook.com/" aria-label="Facebook"><i class="bi bi-facebook" aria-hidden="true"></i></a>
+                        <a href="https://www.instagram.com/" aria-label="Instagram"><i class="bi bi-instagram" aria-hidden="true"></i></a>
+                        <a href="https://wa.me/" aria-label="WhatsApp"><i class="bi bi-whatsapp" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <h2 class="h5">Páginas</h2>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="emprendedoras.html">Emprendedoras</a></li>
+                        <li><a href="nosotras.html">Nosotras</a></li>
+                        <li><a href="bazares.html">Bazares</a></li>
+                        <li><a href="unete.html">Únete</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-4">
+                    <h2 class="h5">Créditos</h2>
+                    <p class="mb-0">Universidad Politécnica de Tulancingo. Octubre de 2026.</p>
+                    <p class="small mt-2 mb-0">Fotografías de <a href="https://www.pexels.com/" rel="noopener">Pexels</a>, de uso libre.</p>
+                </div>
+            </div>
+            <hr>
+            <p class="small mb-0">Negocios, teléfonos y precios de ejemplo. Ninguno es real.</p>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="vendor/bootstrap.bundle.min.js" defer></script>
+    <script src="js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,681 @@
+/* =====================================================
+   MERCADITO VIOLETA - Personalización de Bootstrap 5
+   ===================================================== */
+
+/* ===== 0. Tipografías (archivos en assets/fonts) ===== */
+@font-face {
+    font-family: 'Young Serif';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('../assets/fonts/young-serif-latin-400-normal.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('../assets/fonts/nunito-latin-500-normal.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url('../assets/fonts/nunito-latin-800-normal.woff2') format('woff2');
+}
+
+/* Fuente de respaldo con las mismas medidas que Nunito (evita saltos al cargar la fuente) */
+@font-face {
+    font-family: 'Nunito Fallback';
+    src: local('Arial'), local('Liberation Sans'), local('Helvetica');
+    size-adjust: 100.4%;
+    ascent-override: 100.7%;
+    descent-override: 35.2%;
+    line-gap-override: 0%;
+}
+
+/* ===== 1. Paleta de colores (cámbiala aquí) ===== */
+:root {
+    --violeta: #5B1F8A;
+    --violeta-oscuro: #3B1550;
+    --violeta-claro: #EBD9FB;
+    --fucsia: #B0105A;
+    --fucsia-claro: #FFD9E6;
+    --mango: #FFB703;
+    --turquesa: #0F766E;
+    --turquesa-claro: #D5F3EE;
+    --crema: #FFF4F0;
+    --borde: #E4CDF5;
+
+    /* Variables propias de Bootstrap, sobrescritas */
+    --bs-primary: #5B1F8A;
+    --bs-body-color: #3B1550;
+    --bs-body-bg: #FFF4F0;
+    --bs-link-color: #5B1F8A;
+    --bs-link-hover-color: #B0105A;
+    --bs-body-font-family: 'Nunito', 'Nunito Fallback', system-ui, sans-serif;
+}
+
+/* ===== 2. Tipografía ===== */
+body {
+    font-size: 1.0625rem;
+    line-height: 1.7;
+    font-weight: 500;
+}
+
+h1,
+h2,
+h3,
+h4,
+.navbar-brand {
+    font-family: 'Young Serif', Georgia, serif;
+    font-weight: 400;
+    line-height: 1.15;
+}
+
+h1 {
+    font-size: clamp(2.3rem, 5.5vw, 4rem);
+}
+
+h2 {
+    font-size: clamp(1.7rem, 3.2vw, 2.4rem);
+}
+
+p {
+    max-width: 68ch;
+}
+
+/* Reserva el espacio de los iconos mientras cargan (evita saltos de diseño) */
+i.bi {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.125em;
+}
+
+/* ===== 3. Accesibilidad ===== */
+.saltar {
+    position: absolute;
+    left: -999px;
+}
+
+.saltar:focus {
+    left: 8px;
+    top: 8px;
+    z-index: 2000;
+    background: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+}
+
+:focus-visible {
+    outline: 3px solid var(--fucsia);
+    outline-offset: 3px;
+}
+
+/* ===== 4. Menú de navegación ===== */
+.navbar {
+    background: #fff;
+    padding: 0.6rem 0;
+}
+
+.navbar-brand {
+    color: var(--violeta);
+    font-size: 1.45rem;
+}
+
+.navbar-brand:hover {
+    color: var(--fucsia);
+}
+
+.navbar .nav-link {
+    color: var(--violeta-oscuro);
+    font-weight: 800;
+    border-radius: 999px;
+    padding: 0.6rem 1.2rem;
+    min-height: 44px;
+    transition: background 0.25s, color 0.25s, transform 0.25s;
+}
+
+.navbar .nav-link:hover {
+    background: var(--violeta-claro);
+    color: var(--violeta);
+    transform: translateY(-2px);
+}
+
+.navbar .nav-link.active {
+    background: var(--violeta);
+    color: #fff;
+}
+
+.navbar-toggler {
+    min-width: 44px;
+    min-height: 44px;
+}
+
+/* ===== 5. Toldo del mercadito (elemento distintivo) ===== */
+.toldo {
+    height: 38px;
+    background: repeating-linear-gradient(
+        90deg,
+        var(--fucsia) 0 48px,
+        var(--mango) 48px 96px,
+        var(--turquesa) 96px 144px,
+        var(--violeta) 144px 192px
+    );
+    -webkit-mask: radial-gradient(circle at 24px 100%, transparent 23px, #000 24px) 0 0 / 48px 100%;
+    mask: radial-gradient(circle at 24px 100%, transparent 23px, #000 24px) 0 0 / 48px 100%;
+}
+
+/* ===== 6. Botones ===== */
+.btn {
+    border-radius: 999px;
+    font-weight: 800;
+    padding: 0.7rem 1.6rem;
+    min-height: 44px;
+    transition: transform 0.25s, background 0.25s, box-shadow 0.25s, color 0.25s;
+}
+
+.btn:hover {
+    transform: translateY(-3px) scale(1.04);
+    box-shadow: 0 10px 22px rgba(91, 31, 138, 0.28);
+}
+
+.btn:active {
+    transform: scale(0.97);
+}
+
+.btn-violeta {
+    background: var(--violeta);
+    color: #fff;
+    border: 2px solid var(--violeta);
+}
+
+.btn-violeta:hover {
+    background: var(--fucsia);
+    border-color: var(--fucsia);
+    color: #fff;
+}
+
+.btn-mango {
+    background: var(--mango);
+    color: var(--violeta-oscuro);
+    border: 2px solid var(--mango);
+}
+
+.btn-mango:hover {
+    background: #fff;
+    color: var(--violeta);
+}
+
+.btn-contorno {
+    background: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+.btn-contorno:hover {
+    background: #fff;
+    color: var(--violeta);
+}
+
+/* ===== 7. Portada y encabezados de página ===== */
+.hero {
+    background: var(--violeta);
+    color: #fff;
+    padding: 3.5rem 0 4.5rem;
+}
+
+.pagina {
+    background: var(--violeta);
+    color: #fff;
+    padding: 3rem 0 3.5rem;
+}
+
+.hero a:not(.btn),
+.pagina a:not(.btn) {
+    color: #fff;
+}
+
+.collage {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.collage img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 1.5rem;
+    border: 4px solid #fff;
+    transition: transform 0.35s;
+}
+
+.collage img:nth-child(1) {
+    transform: rotate(-4deg);
+}
+
+.collage img:nth-child(2) {
+    transform: rotate(3deg) translateY(1.5rem);
+}
+
+.collage img:hover {
+    transform: rotate(0deg) scale(1.06);
+}
+
+/* ===== 8. Tarjetas ===== */
+.tarjeta {
+    background: #fff;
+    border: 2px solid var(--borde);
+    border-radius: 1.5rem;
+    overflow: hidden;
+    height: 100%;
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 32px rgba(91, 31, 138, 0.22);
+    border-color: var(--violeta);
+}
+
+.tarjeta img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.45s;
+}
+
+.tarjeta:hover img {
+    transform: scale(1.07);
+}
+
+.caja {
+    padding: 1.75rem;
+}
+
+.icono {
+    width: 3.5rem;
+    height: 3.5rem;
+    display: grid;
+    place-items: center;
+    border-radius: 1rem;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    color: var(--violeta-oscuro);
+    transition: transform 0.3s, background 0.3s;
+}
+
+.tarjeta:hover .icono {
+    transform: rotate(-8deg) scale(1.12);
+}
+
+.color1 { background: var(--fucsia-claro); }
+.color2 { background: var(--violeta-claro); }
+.color3 { background: var(--turquesa-claro); }
+.color4 { background: #FFE9A8; }
+
+/* Número de paso (sección "Así funciona") */
+.paso {
+    display: grid;
+    place-items: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: 50%;
+    background: var(--violeta);
+    color: #fff;
+    font-family: 'Young Serif', Georgia, serif;
+    font-size: 1.4rem;
+    line-height: 1;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.tarjeta:hover .paso {
+    background: var(--fucsia);
+    transform: scale(1.1);
+}
+
+.etiqueta {
+    display: inline-block;
+    background: var(--violeta-claro);
+    color: var(--violeta);
+    border-radius: 999px;
+    padding: 0.15rem 0.85rem;
+    font-size: 0.9rem;
+    font-weight: 800;
+}
+
+.dato {
+    display: flex;
+    gap: 0.5rem;
+    align-items: baseline;
+    margin-bottom: 0.35rem;
+    font-weight: 700;
+}
+
+.dato i {
+    color: var(--fucsia);
+}
+
+/* ===== 9. Filtros y búsqueda ===== */
+.filtros .btn {
+    border: 2px solid var(--violeta);
+    color: var(--violeta);
+    background: #fff;
+}
+
+.filtros .btn.activo,
+.filtros .btn:hover {
+    background: var(--violeta);
+    color: #fff;
+}
+
+.buscador {
+    border: 2px solid var(--borde);
+    border-radius: 999px;
+    padding: 0.7rem 1.2rem;
+    min-height: 44px;
+    transition: border-color 0.25s, box-shadow 0.25s;
+}
+
+.buscador:focus {
+    border-color: var(--violeta);
+    box-shadow: 0 0 0 4px var(--violeta-claro);
+}
+
+/* ===== 10. Franjas y bloques de color ===== */
+.franja {
+    background: var(--turquesa-claro);
+    border-radius: 2rem;
+    padding: 2.25rem;
+}
+
+.franja-fucsia {
+    background: var(--fucsia);
+    color: #fff;
+    border-radius: 2rem;
+    padding: 2.25rem;
+}
+
+/* ===== 11. Acordeón y formulario ===== */
+.accordion {
+    --bs-accordion-bg: #fff;
+    --bs-accordion-border-color: var(--borde);
+    --bs-accordion-active-bg: var(--violeta-claro);
+    --bs-accordion-active-color: var(--violeta-oscuro);
+    --bs-accordion-btn-focus-box-shadow: 0 0 0 4px var(--violeta-claro);
+}
+
+.accordion-item {
+    border-radius: 1rem;
+    overflow: hidden;
+    margin-bottom: 0.75rem;
+    border: 2px solid var(--borde);
+}
+
+.accordion-button {
+    font-weight: 800;
+    min-height: 56px;
+}
+
+.form-control,
+.form-select {
+    border: 2px solid var(--borde);
+    border-radius: 1rem;
+    padding: 0.7rem 1rem;
+    min-height: 44px;
+    transition: border-color 0.25s, box-shadow 0.25s;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--violeta);
+    box-shadow: 0 0 0 4px var(--violeta-claro);
+}
+
+.form-label {
+    font-weight: 800;
+}
+
+/* ===== 12. Animaciones ===== */
+@keyframes sube {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* Aparición al cargar la página */
+.entrada {
+    animation: sube 0.45s ease both;
+}
+
+.entrada:nth-child(2) { animation-delay: 0.08s; }
+.entrada:nth-child(3) { animation-delay: 0.16s; }
+
+/* Aparición al hacer scroll (la activa js/main.js) */
+.revela {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s, transform 0.6s;
+}
+
+.revela.visible {
+    opacity: 1;
+    transform: none;
+}
+
+/* ===== 13. Pie de página ===== */
+footer {
+    background: var(--violeta-oscuro);
+    color: #F6E8FF;
+    padding: 3rem 0 1.5rem;
+}
+
+footer a {
+    color: #FFD1E3;
+    display: inline-block;
+    padding: 0.2rem 0;
+}
+
+footer a:hover {
+    color: #fff;
+}
+
+.redes a {
+    display: inline-grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.12);
+    font-size: 1.25rem;
+    margin-right: 0.5rem;
+    transition: background 0.25s, transform 0.25s;
+}
+
+.redes a:hover {
+    background: var(--mango);
+    color: var(--violeta-oscuro);
+    transform: translateY(-3px);
+}
+
+/* ===== 13b. Páginas Nosotras y Bazares ===== */
+.cifra {
+    background: #fff;
+    border: 2px solid var(--borde);
+    border-radius: 1.5rem;
+    padding: 1.5rem 1rem;
+    font-weight: 800;
+    height: 100%;
+}
+
+.cifra span {
+    display: block;
+    font-family: 'Young Serif', Georgia, serif;
+    font-weight: 400;
+    font-size: clamp(2.4rem, 5vw, 3.4rem);
+    line-height: 1.1;
+    color: var(--fucsia);
+}
+
+.lista-eventos {
+    display: grid;
+    gap: 1.25rem;
+}
+
+.evento {
+    display: flex;
+    gap: 1.25rem;
+    align-items: flex-start;
+    background: #fff;
+    border: 2px solid var(--borde);
+    border-radius: 1.5rem;
+    padding: 1.25rem;
+}
+
+.evento.d-none {
+    display: none;
+}
+
+.fecha {
+    flex: 0 0 4.5rem;
+    text-align: center;
+    background: var(--violeta);
+    color: #fff;
+    border-radius: 1rem;
+    padding: 0.6rem 0.4rem;
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+.fecha strong {
+    display: block;
+    font-family: 'Young Serif', Georgia, serif;
+    font-weight: 400;
+    font-size: 2rem;
+}
+
+/* ===== 13c. Carrusel y categorías ===== */
+.carrusel {
+    border-radius: 1.5rem;
+    overflow: hidden;
+    border: 4px solid #fff;
+    box-shadow: 0 12px 28px rgba(91, 31, 138, 0.2);
+}
+
+.carrusel .carousel-item img {
+    display: block;
+    width: 100%;
+    height: clamp(280px, 48vw, 500px);
+    object-fit: cover;
+}
+
+.carrusel .carousel-caption {
+    left: 4.5rem;
+    right: auto;
+    bottom: 2.5rem;
+    max-width: 24rem;
+    text-align: left;
+    background: rgba(59, 21, 80, 0.9);
+    border-radius: 1.25rem;
+    padding: 1rem 1.25rem;
+}
+
+.carrusel .carousel-caption h3 {
+    color: #fff;
+}
+
+.carrusel .carousel-indicators {
+    margin-bottom: 0.5rem;
+}
+
+.carrusel .carousel-indicators [data-bs-target] {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.logo-hero {
+    background: #fff;
+    border-radius: 2rem;
+    padding: 1rem;
+    max-width: 380px;
+    margin: 0 auto;
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.25);
+}
+
+.logo-hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.categoria {
+    display: block;
+    color: var(--violeta-oscuro);
+}
+
+.categoria:hover {
+    color: var(--violeta);
+}
+
+blockquote {
+    font-size: 1.1rem;
+}
+
+@media (max-width: 575.98px) {
+    .carrusel .carousel-caption {
+        left: 0.75rem;
+        right: 0.75rem;
+        bottom: 2rem;
+        max-width: none;
+        padding: 0.75rem 1rem;
+    }
+
+    .carrusel .carousel-caption p {
+        display: none;
+    }
+}
+
+/* ===== 14. Ajustes para tableta y teléfono ===== */
+@media (max-width: 767.98px) {
+    .hero {
+        padding: 2.5rem 0 3.5rem;
+    }
+
+    .collage img:nth-child(2) {
+        transform: rotate(3deg) translateY(0.75rem);
+    }
+
+    .franja,
+    .franja-fucsia {
+        padding: 1.5rem;
+    }
+}
+
+/* Respeta a quien desactiva las animaciones en su dispositivo */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+
+    .entrada,
+    .revela {
+        opacity: 1;
+        transform: none;
+    }
+}

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Únete | Mercadito Violeta</title>
+    <meta name="description" content="Registra tu negocio en Mercadito Violeta. Es gratis y solo toma unos minutos.">
+    <meta name="theme-color" content="#5B1F8A">
+    <meta name="author" content="Josué Joel Macías Ortega">
+    <meta name="keywords" content="emprendedoras, Tulancingo, Hidalgo, hecho a mano, negocios locales, bazares, directorio">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph (vista previa al compartir en Facebook, WhatsApp, etc.) -->
+    <!-- Al publicar el sitio, cambia la ruta de og:image por la URL completa -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Mercadito Violeta">
+    <meta property="og:locale" content="es_MX">
+    <meta property="og:title" content="Únete | Mercadito Violeta">
+    <meta property="og:description" content="Registra tu negocio en Mercadito Violeta. Es gratis y solo toma unos minutos.">
+    <meta property="og:image" content="assets/img/logo.png">
+    <meta property="og:image:alt" content="Logo de Mercadito Violeta">
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Únete | Mercadito Violeta">
+    <meta name="twitter:description" content="Registra tu negocio en Mercadito Violeta. Es gratis y solo toma unos minutos.">
+    <meta name="twitter:image" content="assets/img/logo.png">
+    <link rel="icon" href="assets/img/logo-icono.png" type="image/png">
+
+    <!-- Las tipografías (Young Serif y Nunito) están en assets/fonts y se declaran en css/styles.css -->
+
+    <!-- Framework: Bootstrap 5.3 e iconos Bootstrap Icons (copias locales en la carpeta vendor) -->
+    <link href="vendor/bootstrap.min.css" rel="stylesheet">
+    <link href="vendor/bootstrap-icons.min.css" rel="stylesheet">
+
+    <!-- Estilos propios (personalización) -->
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+    <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+    <!-- HEADER Y MENÚ DE NAVEGACIÓN -->
+    <header>
+        <nav class="navbar navbar-expand-lg" aria-label="Principal">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                    <img src="assets/img/logo-icono.png" alt="" width="40" height="40">
+                    Mercadito Violeta
+                </a>
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir menú">
+                    <i class="bi bi-list fs-2" aria-hidden="true"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="menu">
+                    <ul class="navbar-nav ms-auto gap-lg-1">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html"><i class="bi bi-shop-window" aria-hidden="true"></i> Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="emprendedoras.html"><i class="bi bi-stars" aria-hidden="true"></i> Emprendedoras</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="nosotras.html"><i class="bi bi-heart-fill" aria-hidden="true"></i> Nosotras</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="bazares.html"><i class="bi bi-calendar-heart" aria-hidden="true"></i> Bazares</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="unete.html"><i class="bi bi-person-heart" aria-hidden="true"></i> Únete</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="toldo" aria-hidden="true"></div>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main id="contenido">
+        <section class="pagina">
+            <div class="container">
+                <h1 class="entrada">Registra tu negocio</h1>
+                <p class="entrada mb-0 fs-5">Es gratis y solo necesitas unos minutos.</p>
+            </div>
+        </section>
+
+        <section class="py-5">
+            <div class="container">
+                <div class="row g-4">
+
+                    <!-- Formulario -->
+                    <div class="col-lg-7" id="contacto">
+                        <div class="tarjeta caja">
+                            <h2 class="h4 mb-3">Formulario de registro</h2>
+                            <form id="formulario" novalidate>
+                                <div class="mb-3">
+                                    <label class="form-label" for="nombre">Tu nombre completo</label>
+                                    <input class="form-control" id="nombre" autocomplete="name" required>
+                                    <div class="invalid-feedback">Escribe tu nombre.</div>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label" for="negocio">Nombre de tu negocio</label>
+                                    <input class="form-control" id="negocio" required>
+                                    <div class="invalid-feedback">Escribe el nombre de tu negocio.</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label" for="categoria">Categoría</label>
+                                        <select class="form-select" id="categoria" required>
+                                            <option value="">Elige una</option>
+                                            <option>Comida</option>
+                                            <option>Hogar</option>
+                                            <option>Accesorios</option>
+                                            <option>Belleza</option>
+                                            <option>Otra</option>
+                                        </select>
+                                        <div class="invalid-feedback">Elige una categoría.</div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label" for="telefono">Teléfono</label>
+                                        <input class="form-control" id="telefono" type="tel" autocomplete="tel" pattern="[0-9 ]{10,14}" required>
+                                        <div class="invalid-feedback">Escribe un teléfono de 10 dígitos.</div>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label" for="correo">Correo electrónico</label>
+                                    <input class="form-control" id="correo" type="email" autocomplete="email" required>
+                                    <div class="invalid-feedback">Escribe un correo válido.</div>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label" for="descripcion">¿Qué vendes?</label>
+                                    <textarea class="form-control" id="descripcion" rows="3" required></textarea>
+                                    <div class="invalid-feedback">Cuéntanos qué productos ofreces.</div>
+                                </div>
+                                <div class="form-check mb-4">
+                                    <input class="form-check-input" type="checkbox" id="acepto" required>
+                                    <label class="form-check-label" for="acepto">Acepto que mis datos de contacto aparezcan en el directorio.</label>
+                                    <div class="invalid-feedback">Debes aceptar para continuar.</div>
+                                </div>
+                                <button class="btn btn-violeta" type="submit"><i class="bi bi-send-heart" aria-hidden="true"></i> Enviar registro</button>
+                            </form>
+                            <div id="ok" class="alert alert-success mt-3 d-none" role="status">
+                                Registro enviado. Te escribiremos pronto para confirmar tu negocio.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Datos y preguntas frecuentes -->
+                    <div class="col-lg-5">
+                        <div class="tarjeta caja h-auto mb-4">
+                            <h2 class="h4 mb-3">Contáctanos</h2>
+                            <p class="dato"><i class="bi bi-geo-alt-fill" aria-hidden="true"></i> Centro de Tulancingo, Hidalgo (ejemplo)</p>
+                            <p class="dato"><i class="bi bi-clock-fill" aria-hidden="true"></i> Lunes a viernes, 10:00 a 18:00</p>
+                            <p class="dato mb-0"><i class="bi bi-envelope-heart-fill" aria-hidden="true"></i> hola@mercaditovioleta.example</p>
+                        </div>
+
+                        <h2 class="h4 mb-3">Preguntas frecuentes</h2>
+                        <div class="accordion" id="preguntas">
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#p1" aria-expanded="true" aria-controls="p1">
+                                        ¿Tiene costo registrarme?
+                                    </button>
+                                </h3>
+                                <div id="p1" class="accordion-collapse collapse show" data-bs-parent="#preguntas">
+                                    <div class="accordion-body">No. El registro y la publicación de tu negocio son gratuitos.</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#p2" aria-expanded="false" aria-controls="p2">
+                                        ¿Necesito tener tienda en línea?
+                                    </button>
+                                </h3>
+                                <div id="p2" class="accordion-collapse collapse" data-bs-parent="#preguntas">
+                                    <div class="accordion-body">No. Basta con un teléfono o una red social para que te contacten.</div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#p3" aria-expanded="false" aria-controls="p3">
+                                        ¿Cuánto tarda en aparecer mi negocio?
+                                    </button>
+                                </h3>
+                                <div id="p3" class="accordion-collapse collapse" data-bs-parent="#preguntas">
+                                    <div class="accordion-body">Revisamos tu registro y lo publicamos en un máximo de tres días hábiles.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-5">
+                    <h2 class="h4">Mercadito Violeta</h2>
+                    <p>Directorio de mujeres emprendedoras de Tulancingo. Proyecto escolar con fines académicos.</p>
+                    <div class="redes">
+                        <a href="https://www.facebook.com/" aria-label="Facebook"><i class="bi bi-facebook" aria-hidden="true"></i></a>
+                        <a href="https://www.instagram.com/" aria-label="Instagram"><i class="bi bi-instagram" aria-hidden="true"></i></a>
+                        <a href="https://wa.me/" aria-label="WhatsApp"><i class="bi bi-whatsapp" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <h2 class="h5">Páginas</h2>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="emprendedoras.html">Emprendedoras</a></li>
+                        <li><a href="nosotras.html">Nosotras</a></li>
+                        <li><a href="bazares.html">Bazares</a></li>
+                        <li><a href="unete.html">Únete</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-4">
+                    <h2 class="h5">Créditos</h2>
+                    <p class="mb-0">Universidad Politécnica de Tulancingo. Octubre de 2026.</p>
+                    <p class="small mt-2 mb-0">Fotografías de <a href="https://www.pexels.com/" rel="noopener">Pexels</a>, de uso libre.</p>
+                </div>
+            </div>
+            <hr>
+            <p class="small mb-0">Negocios, teléfonos y precios de ejemplo. Ninguno es real.</p>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="vendor/bootstrap.bundle.min.js" defer></script>
+    <script src="js/main.js" defer></script>
+</body>
+</html>
